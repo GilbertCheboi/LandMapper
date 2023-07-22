@@ -1,0 +1,17 @@
+<h2>Calendly Events</h2>
+
+{% if events %}
+    <ul>
+        {% for event in events %}
+            <li>
+                <strong>Title:</strong> {{ event.title }}<br>
+                <strong>Start Time:</strong> {{ event.start_time }}<br>
+                <strong>End Time:</strong> {{ event.end_time }}<br>
+                <strong>Location:</strong> {{ event.location }}
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No events found.</p>
+{% endif %}
+https://chat.openai.com/share/6e6d0b9e-22bb-4829-8589-38e88b449bf2
